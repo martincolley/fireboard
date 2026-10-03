@@ -14,6 +14,7 @@
 					<code class="l-code-inline">127.0.0.1</code>
 					only. The MCP runs on your machine, not ours.
 				</p>
+				<p><NuxtLink to="/docs/mcp">How to set it up →</NuxtLink></p>
 			</div>
 			<div class="media">
 				<div class="terminal">

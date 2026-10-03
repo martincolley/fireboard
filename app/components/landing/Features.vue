@@ -29,8 +29,7 @@ const extras = [
 				<h3 class="l-h3">Regions side by side</h3>
 				<p class="l-soft">
 					Every named database in a project shows up with its location. Switch the same path between
-					<code class="l-code-inline">(default)</code>
-					,
+					<code class="l-code-inline">(default)</code>,
 					<code class="l-code-inline">default-eu</code>
 					and
 					<code class="l-code-inline">default-au</code>

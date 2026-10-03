@@ -27,8 +27,7 @@ const points = [
 			<p class="l-lead">
 				Not "encrypted on our servers". Not "deleted after 30 days". Collections, documents, queries
 				and edits go between your browser and Google, and nowhere else. Don't take our word for it:
-				<a href="https://github.com/martincolley/fireboard" rel="noopener">the code is public</a>
-				.
+				<a href="https://github.com/martincolley/fireboard" rel="noopener">the code is public</a>.
 			</p>
 			<LandingDataFlow />
 			<div class="points">
