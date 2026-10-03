@@ -10,5 +10,12 @@
 	"arrowParens": "always",
 	"proseWrap": "never",
 	"bracketSameLine": true,
-	"htmlWhitespaceSensitivity": "ignore"
+	"htmlWhitespaceSensitivity": "ignore",
+	// Prose pages: keep inline links and code attached to the punctuation after them.
+	"overrides": [
+		{
+			"files": ["app/pages/docs/**", "app/components/landing/**", "app/components/docs/**"],
+			"options": { "htmlWhitespaceSensitivity": "css" }
+		}
+	]
 }
