@@ -1,0 +1,162 @@
+/* Homepage only. Fonts are self-hosted (no third-party requests from the page). */
+@import '@fontsource/bricolage-grotesque/500.css';
+@import '@fontsource/bricolage-grotesque/700.css';
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/jetbrains-mono/400.css';
+
+.landing {
+	--l-bg: #141416;
+	--l-band: #18181c;
+	--l-card: #1b1b20;
+	--l-code: #0f0f12;
+	--l-line: #2a2a31;
+	--l-line-strong: #3a3a43;
+	--l-text: #ececf1;
+	--l-soft: #c4c4cc;
+	--l-muted: #9a9aa6;
+	--l-accent: #ff8a3d;
+	--l-accent-text: #1b0d03;
+	--l-accent-soft: #ffb27f;
+	background: var(--l-bg);
+	color: var(--l-text);
+	font-family: 'IBM Plex Sans', system-ui, sans-serif;
+	font-size: 17px;
+	line-height: 1.6;
+	min-height: 100vh;
+}
+.landing a {
+	color: var(--l-accent-soft);
+}
+.l-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.l-section {
+	padding-top: 104px;
+	padding-bottom: 24px;
+}
+.l-eyebrow {
+	color: var(--l-accent);
+	font-weight: 600;
+	font-size: 15px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin: 0;
+}
+.l-display {
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	margin: 14px 0 0;
+	line-height: 1.06;
+}
+.l-h2 {
+	font-size: clamp(32px, 4.4vw, 54px);
+}
+.l-h2-sm {
+	font-size: clamp(30px, 3.6vw, 44px);
+}
+.l-lead {
+	color: var(--l-soft);
+	font-size: 19px;
+	max-width: 46rem;
+	margin: 20px 0 0;
+}
+.l-soft {
+	color: var(--l-soft);
+}
+.l-mono {
+	font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+.l-code-inline {
+	font-family: 'JetBrains Mono', ui-monospace, monospace;
+	font-size: 15px;
+	color: var(--l-accent-soft);
+}
+.l-btn {
+	display: inline-flex;
+	align-items: center;
+	min-height: 48px;
+	box-sizing: border-box;
+	padding: 14px 24px;
+	border-radius: 10px;
+	text-decoration: none;
+	font-weight: 600;
+}
+.landing .l-btn-primary {
+	background: var(--l-accent);
+	color: var(--l-accent-text);
+}
+.landing .l-btn-primary:hover {
+	background: #ff9d5c;
+	color: var(--l-accent-text);
+}
+.landing .l-btn-ghost {
+	color: var(--l-text);
+	border: 1px solid var(--l-line-strong);
+	font-weight: 500;
+}
+.landing .l-btn-ghost:hover {
+	border-color: var(--l-muted);
+	color: var(--l-text);
+}
+.l-shot {
+	margin: 0;
+	border: 1px solid #2f2f37;
+	border-radius: 12px;
+	overflow: hidden;
+	background: var(--l-card);
+}
+.l-shot img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.l-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 40px 56px;
+}
+.l-row-text {
+	flex: 1 1 320px;
+	min-width: 0;
+}
+.l-row-media {
+	flex: 2 1 520px;
+	min-width: 0;
+}
+.l-h3 {
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-size: 30px;
+	line-height: 1.15;
+	margin: 0;
+}
+.l-card {
+	background: var(--l-card);
+	border: 1px solid var(--l-line);
+	border-radius: 12px;
+	padding: 22px;
+}
+.l-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 16px;
+}
+.l-pre {
+	margin: 0;
+	font-family: 'JetBrains Mono', ui-monospace, monospace;
+	font-size: 13px;
+	line-height: 1.6;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+.l-label {
+	font-size: 13px;
+	color: var(--l-muted);
+	margin-bottom: 8px;
+}

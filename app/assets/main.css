@@ -1,0 +1,62 @@
+:root {
+	--fb-bg: #18181c;
+	--fb-panel: #1f1f24;
+	--fb-border: #2c2c33;
+	--fb-muted: #8a8a93;
+	--fb-accent: #ff8a3d;
+	--fb-string: #6cb6ff;
+	--fb-number: #8ddb8c;
+	--fb-boolean: #c792ea;
+	--fb-timestamp: #f0a35e;
+	--fb-reference: #f778ba;
+	--fb-null: #8a8a93;
+	--fb-container: #c9c9d1;
+}
+
+html,
+body,
+#__nuxt {
+	height: 100%;
+	margin: 0;
+	background: var(--fb-bg);
+	color: #e6e6eb;
+	font-family:
+		Inter,
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		sans-serif;
+	font-size: 13px;
+}
+
+.mono {
+	font-family: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, monospace;
+	font-size: 12px;
+}
+
+.v-string {
+	color: var(--fb-string);
+}
+.v-number {
+	color: var(--fb-number);
+}
+.v-boolean {
+	color: var(--fb-boolean);
+}
+.v-timestamp {
+	color: var(--fb-timestamp);
+}
+.v-reference,
+.v-bytes,
+.v-vector,
+.v-geopoint {
+	color: var(--fb-reference);
+}
+.v-null {
+	color: var(--fb-null);
+	font-style: italic;
+}
+.v-array,
+.v-map {
+	color: var(--fb-container);
+}

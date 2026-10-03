@@ -1,0 +1,21 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+dist
+
+# Environment / credentials - never commit
+.env
+.env.*
+!.env.example
+*service-account*.json
+.fireboard/
+
+# IDE / Tools
+.claude/settings.local.json
+.vscode/*
+CHANGELOG.csv
+.dev.vars*
+.wrangler/

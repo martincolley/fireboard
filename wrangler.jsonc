@@ -1,0 +1,40 @@
+// Hosted Fireboard (cloud build). Build with `npm run build:cloud`, then deploy.
+// The worker holds no Google credentials: only app accounts (D1) and billing.
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "fireboard",
+	// Personal account (martincolley profile). Pinned so a deploy can never reach another account.
+	"account_id": "30510b34a340957698145301f151aacd",
+	"main": ".output/server/index.mjs",
+	"compatibility_date": "2026-10-01",
+	"compatibility_flags": ["nodejs_compat"],
+	"assets": {
+		"directory": ".output/public",
+		"binding": "ASSETS",
+		"not_found_handling": "single-page-application",
+		"run_worker_first": ["/api/*", "/"]
+	},
+	"observability": { "enabled": true },
+	// fireboard.dev is the only address: the workers.dev URL is off, www redirects.
+	"workers_dev": false,
+	"preview_urls": false,
+	"routes": [
+		{ "pattern": "fireboard.dev", "custom_domain": true },
+		{ "pattern": "www.fireboard.dev", "custom_domain": true }
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "fireboard",
+			"database_id": "cd3d8661-a38c-49f1-8816-c9eb9a1384d5",
+			"migrations_dir": "migrations"
+		}
+	],
+	// ALLOWED_EMAILS (admins) is a Worker secret, not a var, so it stays out of the repo.
+	"vars": {
+		"PUBLIC_BASE_URL": "https://fireboard.dev",
+		// Public OAuth client id (not a secret). GOOGLE_CLIENT_SECRET is a Worker secret.
+		"GOOGLE_CLIENT_ID": "100245087631-anebu5k4m3sjak14k51rk37kgg3ihv66.apps.googleusercontent.com",
+		"NUXT_PUBLIC_GOOGLE_CLIENT_ID": "100245087631-anebu5k4m3sjak14k51rk37kgg3ihv66.apps.googleusercontent.com"
+	}
+}
